@@ -1,5 +1,4 @@
 #include <vector>
-#include <cstdio>
 #include <iostream>
 #include "include/delaunator.hpp"
 

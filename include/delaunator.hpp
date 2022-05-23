@@ -1,3 +1,5 @@
+// For more information on this implementation visit: https://github.com/delfrrr/delaunator-cpp
+
 #pragma once
 
 #include <algorithm>

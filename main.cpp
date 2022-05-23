@@ -5,26 +5,24 @@
 
 int main()
 {
-    
     std::vector<double> coords = {-1, 1, //x0,y0
                                    1,  1,
                                    1, -1,
                                   -1, -1};
 
     // Triangulation happens here
-    delaunator::Delaunator d(coords);
+    delaunator::Delaunator delauney(coords);
 
     size_t triangleCount = 1;
     size_t pointCount = 0;
-    for (const auto &triangle : d.triangles)
+    for (const auto &triangle : delauney.triangles)
     {
         if (pointCount == 0)
         {
             std::cout << "Triangle #" << triangleCount << std::endl;
         }
 
-        std::cout << "X =" << d.coords[2 * triangle] << " ; Y =" << d.coords[2 * triangle + 1] << std::endl;
-        // std::cout << triangle << std::endl;
+        std::cout << "X =" << coords[2 * triangle] << " ; Y =" << coords[2 * triangle + 1] << std::endl;
         pointCount++;
 
         if (pointCount == 3)
